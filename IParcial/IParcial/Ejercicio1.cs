@@ -17,18 +17,35 @@ namespace IParcial
             InitializeComponent();
         }
 
+        decimal sumaTotal = 0;
         private void Sumarbutton_Click(object sender, EventArgs e)
         {
             //Variables
-            //decimal Numero1 = Convert.ToDecimal(Numero1textBox.Text);
-            //decimal Numero2 = Convert.ToDecimal(Numero2textBox.Text);
+            decimal Numero1 = Convert.ToDecimal(Numero1textBox.Text);
+            decimal Numero2 = Convert.ToDecimal(Numero2textBox.Text);
 
             //decimal resultado = Numero1 + Numero2;
-            decimal resultado = Convert.ToDecimal(Numero1textBox.Text) + Convert.ToDecimal(Numero2textBox.Text);
+            //decimal resultado = Convert.ToDecimal(Numero1textBox.Text) + Convert.ToDecimal(Numero2textBox.Text);
 
-            Resultadolabel.Text = Convert.ToString(resultado);
+            // Resultadolabel.Text = Convert.ToString(resultado);
 
-           // MessageBox.Show("La suma es: " + resultado);
+            // MessageBox.Show("La suma es: " + resultado);
+
+            //Sumar(Numero1, Numero2);
+            sumaTotal = Sumatoria(Numero1, Numero2);
+            MessageBox.Show("La suma es: " + sumaTotal ,"Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //Procedimiento
+        private void Sumar(decimal num1, decimal num2)
+        {
+            sumaTotal = num1 + num2;
+        }
+
+        //Funcion
+        private decimal Sumatoria(decimal num1, decimal num2)
+        {
+            return num1 + num2;
         }
     }
 }
